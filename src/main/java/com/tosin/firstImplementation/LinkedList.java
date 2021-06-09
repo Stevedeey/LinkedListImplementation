@@ -70,6 +70,10 @@ public class LinkedList {
             return -1;
         }
 
+        public boolean isContains(int value){
+            return indexOf(value) != -1;
+        }
+
 
     }
 }
