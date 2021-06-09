@@ -59,5 +59,17 @@ public class LinkedList {
             first = second;
         }
 
+        public int indexOf(int value){
+            var current = first;
+            int index = 0;
+            while(current!=null){
+                if(current.data == value) return index;
+                current = current.next;
+                index++;
+            }
+            return -1;
+        }
+
+
     }
 }
