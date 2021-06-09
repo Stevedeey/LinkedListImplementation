@@ -12,5 +12,14 @@ public class LinkedList {
 
         private Node first;
         private Node last;
+
+        public void addLastNode(int value){
+            Node node = new Node(value);
+            if(first == null){
+                first = last = null;
+            }
+            last.next = node;
+            last = node;
+        }
     }
 }
