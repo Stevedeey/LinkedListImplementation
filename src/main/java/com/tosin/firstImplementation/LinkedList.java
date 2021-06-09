@@ -1,5 +1,7 @@
 package com.tosin.firstImplementation;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList {
 
     public class Node{
@@ -44,6 +46,18 @@ public class LinkedList {
             last = current;
         }
 
+        public void removeFirst(){
+
+            var second = first.next;
+            if(first == null){
+                throw new NoSuchElementException();
+            }
+            if(first==null){
+                last = first = null;
+            }
+            first  = null;
+            first = second;
+        }
 
     }
 }
