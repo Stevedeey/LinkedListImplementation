@@ -1,0 +1,46 @@
+Terminology
+In the last section, we used a lot of Docker-specific jargon which might be confusing to some. So before we go further, let me clarify some terminology that is used frequently in the Docker ecosystem.
+
+Images - The blueprints of our application which form the basis of containers. In the demo above, we used the docker pull command to download the busybox image.
+Containers - Created from Docker images and run the actual application. We create a container using docker run which we did using the busybox image that we downloaded. A list of running containers can be seen using the docker ps command.
+Docker Daemon - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
+Docker Client - The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as Kitematic which provide a GUI to the users.
+Docker Hub - A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
+
+
+Why use containers?
+Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they actually run. This decoupling allows container-based applications to be deployed easily and consistently, regardless of whether the target environment is a private data center, the public cloud, or even a developer’s personal laptop. This gives developers the ability to create predictable environments that are isolated from the rest of the applications and can be run anywhere.
+
+
+
+What are containers?
+The industry standard today is to use Virtual Machines (VMs) to run software applications. VMs run applications inside a guest Operating System, which runs on virtual hardware powered by the server’s host OS.
+
+VMs are great at providing full process isolation for applications: there are very few ways a problem in the host operating system can affect the software running in the guest operating system, and vice-versa. But this isolation comes at great cost — the computational overhead spent virtualizing hardware for a guest OS to use is substantial.
+
+Containers take a different approach: by leveraging the low-level mechanics of the host operating system, containers provide most of the isolation of virtual machines at a fraction of the computing power.
+
+ Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux.
+
+
+ Dockerize a 2-Tier Java application by creating a Docker Image.
+ Push the same Docker Image to Docker Hub.
+ Run a container based version of the Application Database using the Docker-Compose file.
+ Ensure data persistence by mounting the data outside of the containers.
+
+ Create a docker image by dockerizing your Java
+
+ Simple to develop relative to microservices where skilled developers are required in order to identify and develop the services.
+ Easier to deploy as only a single jar/war file is deployed.
+ Relatively easier and simple to develop in comparison to microservices architecture.
+ The problems of network latency and security are relatively less in comparison to microservices architecture.
+
+ Being a distributed system, it is much more complex than the monolothic applications. Its complexity increases with the increase in number of microservices.
+ Skilled developers are required to work with microservices architecture which can identify the microservices and manage their inter-communications.
+ Independent deployment of microservices is complicated.
+ Microservices are costly in terms of network usage as they need to interact with each other and all these remote calls results into network latency.
+ Microservices are less secure relative to monolithic applications due to the inter-services communication over the network.
+ Debugging is difficult as the control flows over many microservices and to point out why and where exactly the error occurred is a difficult task.
+
+ Continuous integration/continuous delivery, known as CI/CD, is a set of processes
+ that help software development teams deliver code changes more frequently and reliably
